@@ -3,163 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quarterly Earnings — Interactive Reveal.js</title>
+  <title>Quarterly Earnings — Reveal.js Presentation</title>
 
-  <!-- Reveal.js from CDN -->
+  <!-- Reveal.js core -->
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/theme/black.css" id="theme">
 
-  <!-- Highlight.js for code syntax highlighting -->
+  <!-- Highlight.js theme -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
 
   <style>
-    /* small visual polish */
-    .email { font-size: 0.9rem; opacity: 0.9 }
-    .slide-code { font-size: 0.9rem }
+    .email { font-size: 0.9rem; opacity: 0.9; }
   </style>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
 
-      <!-- Title slide -->
-      <section>
-        <h1>Q3 Quarterly Earnings Report</h1>
-        <p class="email">Prepared by: 24f2009283@ds.study.iitm.ac.in</p>
-        <p class="fragment" data-fragment-index="1">Date: Q3 2025</p>
-        <p class="fragment" data-fragment-index="2">Confidential — For stakeholders</p>
-        <aside class="notes">Open with a short thank-you and a one-line summary of performance.</aside>
-      </section>
+<div class="reveal">
+  <div class="slides">
 
-      <!-- Markdown slide (uses the Markdown plugin) -->
-      <section data-markdown>
-        <textarea data-template>
-## Executive Summary (Markdown slide)
+    <!-- Title Slide -->
+    <section>
+      <h1>Q3 Quarterly Earnings Report</h1>
+      <p class="email">Prepared by: 24f2009283@ds.study.iitm.ac.in</p>
+      <p class="fragment" data-fragment-index="1">Date: Q3 2025</p>
+      <p class="fragment" data-fragment-index="2">Confidential — For stakeholders</p>
+      <aside class="notes">Open with a thank-you and a one-line summary.</aside>
+    </section>
 
-- **Revenue**: Up 8% QoQ
-- **Net Income**: Up 12% YoY
-- **Key drivers**:
-  1. Increased subscription uptake
-  2. Cost discipline
+    <!-- Markdown Slide -->
+    <section data-markdown>
+<textarea data-template>
+## Executive Summary (Markdown)
 
-> "Focused execution delivered improved margins and steady growth."
+- **Revenue**: Up 8% QoQ  
+- **Net Income**: Up 12% YoY  
+- **Key Drivers**:
+  1. Subscription growth  
+  2. Cost optimization  
 
 *Contact:* 24f2009283@ds.study.iitm.ac.in
-        </textarea>
-        <aside class="notes">This slide is written in Markdown for quick editing. Mention two or three bullet highlights.</aside>
-      </section>
+</textarea>
+      <aside class="notes">Markdown slide for editable summaries.</aside>
+    </section>
 
-      <!-- Slide with fragments (animated reveal) -->
-      <section>
-        <h2>Revenue Breakdown</h2>
-        <ul>
-          <li class="fragment">Subscriptions — 55%</li>
-          <li class="fragment">Transaction fees — 25%</li>
-          <li class="fragment">Services & Other — 20%</li>
-        </ul>
-        <aside class="notes">Walk the audience through each revenue stream. Use fragments to reveal one at a time.</aside>
-      </section>
+    <!-- Fragments Slide -->
+    <section>
+      <h2>Revenue Breakdown</h2>
+      <ul>
+        <li class="fragment">Subscriptions — 55%</li>
+        <li class="fragment">Transaction Fees — 25%</li>
+        <li class="fragment">Services — 20%</li>
+      </ul>
+      <aside class="notes">Reveal points one-by-one.</aside>
+    </section>
 
-      <!-- Code sample with syntax highlighting -->
-      <section>
-        <h2>Example: Generating a Simple Financial KPI (Python)</h2>
-        <pre><code class="language-python">
-# calc_roi.py — return-on-investment
-
+    <!-- Code Highlight Slide -->
+    <section>
+      <h2>Python ROI Example</h2>
+      <pre><code class="language-python">
 def roi(gain, cost):
-    """Compute simple ROI as a percentage."""
     return ((gain - cost) / cost) * 100
 
-if __name__ == '__main__':
-    print(f'ROI: {roi(120000, 100000):.2f}%')
-        </code></pre>
-        <aside class="notes">Explain the KPI and why ROI matters for capital allocation. The code block auto-highlights.</aside>
-      </section>
+print(roi(120000, 100000))
+      </code></pre>
+      <aside class="notes">ROI is a key profitability metric.</aside>
+    </section>
 
-      <!-- Slide with math formulas (MathJax) -->
-      <section>
-        <h2>Key Financial Formulas</h2>
-        <p class="fragment">Net Present Value (NPV):</p>
-        <p class="fragment">\[ \mathrm{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \]</p>
+    <!-- Math Formulas Slide -->
+    <section>
+      <h2>Financial Formulas</h2>
 
-        <p class="fragment">Return on Equity (ROE):</p>
-        <p class="fragment">\[ \mathrm{ROE} = \dfrac{\text{Net Income}}{\text{Shareholder's Equity}} \times 100\% \]</p>
+      <p class="fragment">NPV:</p>
+      <p class="fragment">\( \text{NPV} = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t} \)</p>
 
-        <aside class="notes">Use these to refer to valuation and profitability. You can show a sample NPV calculation if asked.</aside>
-      </section>
+      <p class="fragment">ROE:</p>
+      <p class="fragment">\( \text{ROE} = \frac{\text{Net Income}}{\text{Equity}} \times 100\% \)</p>
 
-      <!-- Slide showing an embedded interactive chart placeholder -->
-      <section>
-        <h2>Quarterly Trend — Revenue</h2>
-        <p>Interactive chart can be embedded here (D3/Chart.js). Below is a static placeholder.</p>
-        <div class="fragment">
-          <svg width="600" height="200" aria-label="simple bars" role="img">
-            <rect x="10" y="100" width="60" height="90"></rect>
-            <rect x="90" y="60" width="60" height="130"></rect>
-            <rect x="170" y="80" width="60" height="110"></rect>
-            <rect x="250" y="40" width="60" height="150"></rect>
-          </svg>
-        </div>
-        <aside class="notes">If you want, I can add a live Chart.js chart that reads a CSV or JSON file.</aside>
-      </section>
+      <aside class="notes">Used for valuation & profitability.</aside>
+    </section>
 
-      <!-- Slide with progressive reveal + code sample in JS -->
-      <section>
-        <h2>Quick Demo: Calculate NPV (JavaScript)</h2>
-        <p class="fragment">Open the console (or run this snippet in a dev tools console).</p>
-        <pre class="fragment"><code class="language-javascript">
+    <!-- JS Example -->
+    <section>
+      <h2>JavaScript NPV Demo</h2>
+      <pre class="fragment"><code class="language-javascript">
 function npv(rate, cashflows) {
-  return cashflows.reduce((acc, cf, i) => acc + cf / Math.pow(1 + rate, i), 0);
+  return cashflows
+    .reduce((acc, cf, i) => acc + cf / Math.pow(1 + rate, i), 0);
 }
 
 console.log(npv(0.08, [-100000, 30000, 40000, 50000, 60000]));
-        </code></pre>
-        <aside class="notes">Walk through the inputs: discount rate and series of cash flows. Point to the console result.</aside>
-      </section>
+      </code></pre>
+      <aside class="notes">Console output shows computed NPV.</aside>
+    </section>
 
-      <!-- Closing slide with action items -->
-      <section>
-        <h2>Next Steps</h2>
-        <ol>
-          <li class="fragment">Approve FY26 guidance</li>
-          <li class="fragment">Allocate capital to high-return projects</li>
-          <li class="fragment">Schedule deep-dive sessions with each BU</li>
-        </ol>
-        <p class="fragment">Contact: 24f2009283@ds.study.iitm.ac.in</p>
-        <aside class="notes">End with a short Q&amp;A and provide contact details (email included on slide).</aside>
-      </section>
-
-    </div>
   </div>
+</div>
 
-  <!-- Reveal.js and plugins -->
-  <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.esm.js"></script>
-  <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.esm.js"></script>
+<!-- Reveal.js scripts -->
+<script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
 
-  <!-- MathJax (via CDN) -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- Non-ESM Markdown & Highlight plugins -->
+<script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
 
-  <!-- Highlight.js (for non-ESM browsers if needed) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<!-- MathJax polyfill -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async 
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-  <script>
-    // Init Reveal
-    Reveal.initialize({
-      hash: true,
-      plugins: [ RevealMarkdown, RevealHighlight ],
-      math: { // MathJax is loaded globally (Reveal's math plugin is optional—using MathJax directly)
-        // empty placeholder to show math support note
-      }
-    });
+<!-- Initialize Reveal -->
+<script>
+  Reveal.initialize({
+    hash: true,
+    plugins: [ RevealMarkdown, RevealHighlight ]
+  });
+</script>
 
-    // Ensure highlight.js runs if needed
-    if (window.hljs) {
-      document.querySelectorAll('pre code').forEach((block) => {
-        hljs.highlightElement(block);
-      });
-    }
-  </script>
 </body>
 </html>
